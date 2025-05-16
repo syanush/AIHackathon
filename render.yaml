@@ -26,6 +26,5 @@ databases:
     postgresMajorVersion: 15
     ipAllowList:
       - source: 0.0.0.0/0
-        description: Allow all connections (not recommended for production)
-    databaseName: aihackathon
-    user: postgres
+        description: Allow all connections (not recommended for production)    databaseName: aihackathon
+    user: aihackathon_user
