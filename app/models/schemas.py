@@ -22,7 +22,7 @@ class UserResponse(UserBase):
     updated_at: datetime
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes to orm_mode for Pydantic v1 compatibility
 
 
 # Message schemas
@@ -41,7 +41,7 @@ class MessageResponse(MessageBase):
     created_at: datetime
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes to orm_mode for Pydantic v1 compatibility
 
 
 # Conversation schemas
@@ -60,14 +60,14 @@ class ConversationResponse(ConversationBase):
     updated_at: datetime
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes to orm_mode for Pydantic v1 compatibility
 
 
 class ConversationWithMessages(ConversationResponse):
     messages: List[MessageResponse] = []
     
     class Config:
-        from_attributes = True
+        orm_mode = True  # Changed from from_attributes to orm_mode for Pydantic v1 compatibility
 
 
 # Health check schema
